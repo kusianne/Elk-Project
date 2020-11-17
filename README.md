@@ -50,7 +50,7 @@ The configuration details of each machine may be found below.
 
 ### Access Policies
 The machines on the internal network are not exposed to the public Internet.
-Only the __Jumpbox___ machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:108.203.213.47
+Only the __Jumpbox___ machine can accept connections from the Internet. Access to this machine is only allowed from my local host IP address.
 
 
 Machines within the network can only be accessed by Jumpbox IP Address:20.55.0.160 and the Load balancer IP Address: __52.142.44.30___.
@@ -61,7 +61,7 @@ A summary of the access policies in place can be found in the table below.
 
 | Name     | Publicly Accessible | Allowed IP Addresses |
 |----------|---------------------|----------------------|
-| Jump Box | No                  | 108.203.213.47       |
+| Jump Box | No                  | Local host IP        |
 | web1     | Yes                 | 52.142.44.30         |
 | Web2     | Yes                 | 52.142.44.30         |
 | Web3     | Yes                 | 52.142.44.30         |
