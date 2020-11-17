@@ -1,0 +1,67 @@
+Name: phase1ping.sh
+#!/bin/bash
+clear
+ping -c 4 15.199.95.91
+clear
+ping -c 4 15.199.94.91
+clear
+ping -c 4 11.199.158.91
+clear
+ping -c 4 167.172.144.11
+clear
+ping -c 4 11.199.141.91
+echo "ping is done!"
+sleep 5
+fping -c 4 15.199.95.91 15.199.94.91 11.199.158.91 167.172.144.11 11.199.141.91
+clear
+fping -s -g 11.199.141.28 167.172.144.32
+echo "fping is done too!"
+
+Name: system.sh
+#!/bin/bash
+
+free -h > ~/backups/freemem/free_mem.txt
+du -h > ~/backups/diskuse/disk_use.txt
+lsof > ~/backups/openlist/openlist.txt
+df -h > ~/backups/freedisk/free_disk.txt
+
+Name: sys_info.sh
+#!/bin/bash
+echo " AG "
+echo "A Quick System Audit Script"
+# this check for a research directory if it exist then it will not create it
+
+if [ ! -d $HOME/research_2 ]
+then
+mkdir $HOME/research_2
+fi
+# Check for output file. Clear it if needed
+if [ -f $output ]
+then
+  rm $output
+fi
+
+mkdir $
+date >>
+echo""
+echo >> $output
+echo "Machine Type Info" >>$output
+echo $MACHTYPE >> $output
+echo -e "Uname info: $(uname -a) \n" >>$output
+echo -e "IP info: $(ip addr | head -9 | tail -1) \n"
+echo "Hostname: $(hostname -s) "
+echo "DNS Servers: "
+cat /etc/resolv.conf
+echo "Memory Info: "
+free
+echo -e "\nCPU Info:"
+lscpu |grep CPU
+echo -e "\nDisk Usage:"
+df -H | head -2
+echo -e "\nWho is logged in: \n $(who -a) \n"
+echo "Creating Research directory"
+mkdir ~/research_02 2> /dev/null 
+echo "Display all executable files under the home directory"
+find /home -type f -perm 777 >> ~/research_02/sys_info.txt
+echo "Listing out the Top 10 processes"
+ps aux --sort %mem | head -11| awk {'print $1, $2, $3, $4, $11'} >> ~/research_02/sys_info.txt

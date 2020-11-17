@@ -1,0 +1,58 @@
+Name: for_loop.sh
+#!/bin/bash
+
+#Here are my five favorite states
+states=(
+        ' CO '
+        ' NE '
+        ' NV '
+        ' LA '
+)
+
+for state in ${states [@]};
+do
+
+           if [ $state= 'Hawaii' ]
+           then
+           echo "$Hawaii is the Best!"
+           else
+           echo "I'm not fond of Hawaii"
+           fi
+done
+   
+
+#Create a for loop that prints out each item in your variable
+
+#create a for loop that lists out the files for passwd directory and shadow di$
+for paths in ${path[@]}
+do
+       sudo ls -l
+done
+
+
+for name in $(ls /home)
+do
+cat /etc/group | grep sudo | grep $name
+done
+
+Name: 0310_script.sh
+#!/bin/bash
+awk -F" " '{print $1, $2, $5, $6}' 0310_Dealer_schedule | grep -e '05:00:00 AM' -e '08:00:00 AM' -e '02:00:00 PM' -e '08:00:00 PM' -e '11:00:00 PM'
+
+Name: 0312_script.sh
+#!/bin/bash
+awk -F" " '{print $1, $2, $5, $6}' 0312_Dealer_schedule  | grep -e '05:00:00 AM' -e '08:00:00 AM' -e '02:00:00 PM' -e '08:00:00 PM' -e '11:00:00 PM'
+
+Name: 0315_script.sh
+#!/bin/bash
+awk -F" " '{print $1, $2, $5, $6}' 0315_Dealer_schedule  | grep -e '05:00:00 AM' -e '08:00:00 AM' -e '02:00:00 PM'
+
+Name: roulette_dealer_finder_by_time.sh
+#!/bin/bash
+# prompt for 3 specific inputs to analyze against dealer schedules
+read -p 'Please enter 4 digit date: ' "date"
+read -p 'Please enter 2 digit hour: ' "hour"
+read -p 'AM or PM ?: ' "AMPM"
+
+cat -e ${date}_Dealer_schedule | grep -e $hour| grep -e $AMPM
+
