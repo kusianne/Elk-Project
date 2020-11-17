@@ -55,7 +55,7 @@ Only the __Jumpbox___ machine can accept connections from the Internet. Access t
 
 Machines within the network can only be accessed by Jumpbox IP Address:20.55.0.160 and the Load balancer IP Address: __52.142.44.30___.
 
-I allowed the Jump box its IP adto access the Elk VM with the Jump box public IP address 20.55.0.160
+I allowed the Jump box IP address to access the Elk VM with the Jump box public IP address 20.55.0.160
 
 A summary of the access policies in place can be found in the table below.
 
