@@ -42,10 +42,13 @@ The configuration details of each machine may be found below.
 |Web1      | Webserver| 10.0.0.5   | Linux            |
 | Web2     | Webserver| 10.0.0.6   | Linux            |
 | Web3     | Webserver| 10.0.0.7   | Linux            |
-| Web4     | Webserver| 10.2.0.4   | Linux            |
+| Web4     | Webserver| Private IP: | Linux           |
+|                        10.2.0.4 
+|                       Public IP:                    |
+|                      13.86.115.130                  |
 
 
-#Access Policies
+### Access Policies
 The machines on the internal network are not exposed to the public Internet.
 Only the __Jumpbox___ machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:108.203.213.47
 
@@ -109,6 +112,6 @@ TODO: Answer the following questions to fill in the blanks:
 
 Which file is the playbook? Yaml Where do you copy it? in the ansble.
 Which file do you update to make Ansible run the playbook on a specific machine? the Config file How do I specify which machine to install the ELK server on versus which to install Filebeat on? By specifying the hosts.
-_Which URL do you navigate to in order to check that the ELK server is running? `http://<ELK.VM.External.IP>:5601/app/kibana`
+_Which URL do you navigate to in order to check that the ELK server is running? `http://<13.86.115.130>:5601/app/kibana`
 
 As a Bonus, provide the specific commands the user will need to run to download the playbook, update the files, etc.
