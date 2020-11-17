@@ -42,8 +42,8 @@ The configuration details of each machine may be found below.
 |Web1      | Webserver| 10.0.0.5   | Linux            |
 | Web2     | Webserver| 10.0.0.6   | Linux            |
 | Web3     | Webserver| 10.0.0.7   | Linux            |
-| Web4     | Webserver| Private IP: | Linux           |
-|                        10.2.0.4 
+| Web4     | Webserver|            | Linux           |
+| Pivate IP:           10.2.0.4 
 |                       Public IP:                    |
 |                      13.86.115.130                  |
 
