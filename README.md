@@ -82,7 +82,7 @@ The ELK installation playbook install:
 ... Download and launch a docker elk container
 
 The following screenshot displays the result of running docker ps after successfully configuring the ELK instance.
-docker_ps_elk761.png
+Diagrams/docker_ps_elk761.PNG
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines: Web1 Web2 and Web3
