@@ -2,7 +2,7 @@ Automated ELK Stack Deployment
 
 The files in this repository were used to configure the network depicted below.
 
-Elkcloud.png
+Diagrams/Elkcloud.png
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the ___yml__ file may be used to install only certain pieces of it, such as Filebeat.
 
@@ -50,18 +50,18 @@ The configuration details of each machine may be found below.
 
 ### Access Policies
 The machines on the internal network are not exposed to the public Internet.
-Only the __Jumpbox___ machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:108.203.213.47
+Only the __Jumpbox___ machine can accept connections from the Internet. Access to this machine is only allowed from my local host IP address.
 
 
 Machines within the network can only be accessed by Jumpbox IP Address:20.55.0.160 and the Load balancer IP Address: __52.142.44.30___.
 
-I allowed the Jump box its IP adto access the Elk VM with the Jump box public IP address 20.55.0.160
+I allowed the Jump box IP address to access the Elk VM with the Jump box public IP address 20.55.0.160
 
 A summary of the access policies in place can be found in the table below.
 
 | Name     | Publicly Accessible | Allowed IP Addresses |
 |----------|---------------------|----------------------|
-| Jump Box | No                  | 108.203.213.47       |
+| Jump Box | No                  | Local host IP        |
 | web1     | Yes                 | 52.142.44.30         |
 | Web2     | Yes                 | 52.142.44.30         |
 | Web3     | Yes                 | 52.142.44.30         |
@@ -82,7 +82,7 @@ The ELK installation playbook install:
 ... Download and launch a docker elk container
 
 The following screenshot displays the result of running docker ps after successfully configuring the ELK instance.
-docker_ps_elk761.png
+Diagrams/docker_ps_elk761.PNG
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines: Web1 Web2 and Web3
