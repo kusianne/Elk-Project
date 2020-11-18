@@ -39,10 +39,10 @@ The configuration details of each machine may be found below.
 |          |          |  Public:   |                  |
 |          |          | 20.55.0.160|                  |
 |          |          |            |                  |
-|Web1      | Webserver| 10.0.0.5   | Linux            |
+| Web1     | Webserver| 10.0.0.5   | Linux            |
 | Web2     | Webserver| 10.0.0.6   | Linux            |
 | Web3     | Webserver| 10.0.0.7   | Linux            |
-| Web4     | Webserver|            | Linux           |
+| Web4     | Webserver|            | Linux            |
 | Pivate IP:           10.2.0.4 
 |                       Public IP:                    |
 |                      13.86.115.130                  |
@@ -70,7 +70,7 @@ A summary of the access policies in place can be found in the table below.
 |                                 group                 |
 
 ### Elk Configuration
-Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because it reducess errors.
+Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because it reduces errors.
 
 The main advantage of automating configuration with Ansible is that it is faster and leave room to do more work.
 
@@ -110,8 +110,8 @@ Run the playbook, and navigate to _the Elk VM___ to check that the installation 
 
 TODO: Answer the following questions to fill in the blanks:
 
-Which file is the playbook? Yaml Where do you copy it? in the ansble.
-Which file do you update to make Ansible run the playbook on a specific machine? the Config file How do I specify which machine to install the ELK server on versus which to install Filebeat on? By specifying the hosts.
-_Which URL do you navigate to in order to check that the ELK server is running? `http://<13.86.115.130>:5601/app/kibana`
+The playbook is a Yaml to be copied in the ansble.
+The elk playbook file needs to be updated to make Ansible run the playbook on a specific machine. We need to update the hosts to specify which machine to install the ELK server on versus which to install Filebeat on.
+In order to check that the ELK server is running, navigate to `http://<13.86.115.130>:5601/app/kibana`
 
-As a Bonus, provide the specific commands the user will need to run to download the playbook, update the files, etc.
+
