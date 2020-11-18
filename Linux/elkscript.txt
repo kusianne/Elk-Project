@@ -1,0 +1,6 @@
+Name: runcontainer.sh
+#!/bin/bash
+#prompt for 3 specific inputs to run the ansible container
+sudo docker container list -a
+sudo docker start strange_mestorf
+sudo docker attach strange_mestorf
